@@ -1,0 +1,5 @@
+<?php
+//Purchase record Management
+
+
+?>

@@ -1,0 +1,890 @@
+<!doctype html>
+<!--[if IE 7 ]>		 <html class="no-js ie ie7 lte7 lte8 lte9" lang="en-US"> <![endif]-->
+<!--[if IE 8 ]>		 <html class="no-js ie ie8 lte8 lte9" lang="en-US"> <![endif]-->
+<!--[if IE 9 ]>		 <html class="no-js ie ie9 lte9>" lang="en-US"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
+<head data-live-domain="blog.jquery.com">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>jQuery 1.11 and 2.1 Released | Official jQuery Blog</title>
+
+	<meta name="author" content="jQuery Foundation - jquery.org">
+	<meta name="description" content="jQuery: The Write Less, Do More, JavaScript Library">
+
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="shortcut icon" href="https://blog.jquery.com/wp-content/themes/jquery.com/i/favicon.ico">
+
+	<link rel="stylesheet" href="https://blog.jquery.com/wp-content/themes/jquery/css/base.css?v=1">
+	<link rel="stylesheet" href="https://blog.jquery.com/wp-content/themes/jquery.com/style.css">
+	<link rel="pingback" href="https://blog.jquery.com/xmlrpc.php" />
+	<!--[if lt IE 7]><link rel="stylesheet" href="css/font-awesome-ie7.min.css"><![endif]-->
+
+	<script src="https://blog.jquery.com/wp-content/themes/jquery/js/modernizr.custom.2.6.2.min.js"></script>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write(unescape('%3Cscript src="https://blog.jquery.com/wp-content/themes/jquery/js/jquery-1.9.1.min.js"%3E%3C/script%3E'))</script>
+
+	<script src="https://blog.jquery.com/wp-content/themes/jquery/js/plugins.js"></script>
+	<script src="https://blog.jquery.com/wp-content/themes/jquery/js/main.js"></script>
+
+	<script src="//use.typekit.net/wde1aof.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
+
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Official jQuery Blog &raquo; Feed" href="https://blog.jquery.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Official jQuery Blog &raquo; Comments Feed" href="https://blog.jquery.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Official jQuery Blog &raquo; jQuery 1.11 and 2.1 Released Comments Feed" href="https://blog.jquery.com/2014/01/24/jquery-1-11-and-2-1-released/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/blog.jquery.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.7.4"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='https://api.w.org/' href='https://blog.jquery.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://blog.jquery.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://blog.jquery.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Getting from GitHub to WordPress' href='https://blog.jquery.com/2014/01/23/getting-from-github-to-wordpress/' />
+<link rel='next' title='Hosting and Configuring the jQuery Servers' href='https://blog.jquery.com/2014/01/27/hosting-and-configuring-the-jquery-servers/' />
+<meta name="generator" content="WordPress 4.7.4" />
+<link rel="canonical" href="https://blog.jquery.com/2014/01/24/jquery-1-11-and-2-1-released/" />
+<link rel='shortlink' href='https://blog.jquery.com/?p=3344' />
+<link rel="alternate" type="application/json+oembed" href="https://blog.jquery.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fblog.jquery.com%2F2014%2F01%2F24%2Fjquery-1-11-and-2-1-released%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://blog.jquery.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fblog.jquery.com%2F2014%2F01%2F24%2Fjquery-1-11-and-2-1-released%2F&#038;format=xml" />
+
+</head>
+<body class="jquery singular">
+
+<!--[if lt IE 7]>
+<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+<![endif]-->
+
+<header>
+	<section id="global-nav">
+		<nav>
+			<div class="constrain">
+				<ul class="projects">
+					<li class="project jquery"><a href="http://jquery.com/" title="jQuery">jQuery</a></li>
+					<li class="project jquery-ui"><a href="http://jqueryui.com/" title="jQuery UI">jQuery UI</a></li>
+					<li class="project jquery-mobile"><a href="http://jquerymobile.com/" title="jQuery Mobile">jQuery Mobile</a></li>
+					<li class="project sizzlejs"><a href="http://sizzlejs.com/" title="Sizzle">Sizzle</a></li>
+					<li class="project qunitjs"><a href="http://qunitjs.com/" title="QUnit">QUnit</a></li>
+				</ul>
+				<ul class="links">
+					<li><a href="http://plugins.jquery.com/">Plugins</a></li>
+					<li class="dropdown"><a href="http://contribute.jquery.org/">Contribute</a>
+						<ul>
+							<li><a href="http://contribute.jquery.org/cla/">CLA</a></li>
+							<li><a href="http://contribute.jquery.org/style-guide/">Style Guides</a></li>
+							<li><a href="http://contribute.jquery.org/triage/">Bug Triage</a></li>
+							<li><a href="http://contribute.jquery.org/code/">Code</a></li>
+							<li><a href="http://contribute.jquery.org/documentation/">Documentation</a></li>
+							<li><a href="http://contribute.jquery.org/web-sites/">Web Sites</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="http://events.jquery.org/">Events</a>
+						<ul class="wide">
+							<li><a href="http://appendto.com/what-we-do/training/schedule/jquery-virtual-training-april-2014/">Apr 16-17 | jQuery Virtual Training</a></li>
+							<li><a href="http://jqueryuk.com/?utm_source=jqueryorg&utm_medium=banner&utm_campaign=jqueryorgbanner">May 16 | jQuery UK</a></li>
+							<li><a href="http://appendto.com/what-we-do/training/schedule/jquery-virtual-training-june-2014/">Jun 17-19 | jQuery Virtual Training</a></li>
+							<li><a href="http://events.jquery.org/2014/chicago/">Sep 12-13 | jQuery Chicago</a></li>
+							<li><a href="http://2014.cssdevconf.com/">Oct 13-15 | CSS Dev Conf 2014</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="https://jquery.org/support/">Support</a>
+						<ul>
+							<li><a href="http://learn.jquery.com/">Learning Center</a></li>
+							<li><a href="http://try.jquery.com/">Try jQuery</a></li>
+							<li><a href="http://irc.jquery.org/">IRC/Chat</a></li>
+							<li><a href="http://forum.jquery.com/">Forums</a></li>
+							<li><a href="http://stackoverflow.com/tags/jquery/info">Stack Overflow</a></li>
+							<li><a href="https://jquery.org/support/">Commercial Support</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="https://jquery.org/">jQuery Foundation</a>
+						<ul>
+							<li><a href="https://jquery.org/join/">Join</a></li>
+							<li><a href="https://jquery.org/members/">Members</a></li>
+							<li><a href="https://jquery.org/team/">Team</a></li>
+							<li><a href="http://brand.jquery.org/">Brand Guide</a></li>
+							<li><a href="https://jquery.org/donate/">Donate</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</section>
+</header>
+
+<div id="container">
+	<div id="logo-events" class="constrain clearfix">
+		<h2 class="logo"><a href="/" title="Official jQuery Blog">Official jQuery Blog</a></h2>
+
+		<aside><div id="broadcast"></div></aside>
+	</div>
+
+	<nav id="main" class="constrain clearfix">
+		<div class="menu-top-container">
+	<ul id="menu-top" class="menu">
+<li class="menu-item"><a href="http://jquery.com/download/">Download</a></li>
+<li class="menu-item"><a href="http://api.jquery.com/">API Documentation</a></li>
+<li class="menu-item"><a href="http://blog.jquery.com/">Blog</a></li>
+<li class="menu-item"><a href="http://plugins.jquery.com/">Plugins</a></li>
+<li class="menu-item"><a href="http://jquery.com/browser-support/">Browser Support</a></li>
+	</ul>
+</div>
+
+		<form method="get" class="searchform" action="https://blog.jquery.com/">
+	<button type="submit" class="icon-search"><span class="visuallyhidden">search</span></button>
+	<label>
+		<span class="visuallyhidden">Search Official jQuery Blog</span>
+		<input type="text" name="s" value=""
+			placeholder="Search">
+	</label>
+</form>
+	</nav>
+
+	<div id="content-wrapper" class="clearfix row">
+
+
+<div class="content-right twelve columns">
+	<div id="content">
+		<h1 class="entry-title">jQuery 1.11 and 2.1 Released</h1>
+				<div class="entry-posted">
+			<span class="sep">Posted on </span><a href="https://blog.jquery.com/2014/01/24/jquery-1-11-and-2-1-released/" title="9:57 am" rel="bookmark"><time class="entry-date" datetime="2014-01-24T09:57:51+00:00" pubdate>January 24, 2014</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="https://blog.jquery.com/author/dmethvin/" title="View all posts by Dave Methvin" rel="author">Dave Methvin</a></span></span>		</div>
+				<hr>
+
+		
+<p>Here in the eastern part of the United States, we&#8217;re huddling in subzero temperatures and dealing with the aftermath of a snowstorm. Still, there&#8217;s nothing to brighten our moods like the pristine beauty of a freshly fallen release&#8211;no, make that TWO releases. jQuery 1.11.0 and 2.1.0 are ready to keep you warm on these dark winter nights.</p>
+<p>You can get the files off our CDN as always, and either use them directly or download them to your own server. Our <a href="http://jquery.com/download/">download page</a> has all the files and information you need, including pointers to the other CDNs that carry the files. Just give those folks a few days to update!</p>
+<p>For those of you not following along for a while, both the 1.x and 2.x branches of jQuery support all recent modern browsers and have the same API. The 1.x branch, this time 1.11.0, adds support for the older versions of Internet Explorer (IE6, 7, and 8). The 2.x branch, today played by 2.1.0, adds support for non-traditional web environments like node.js and browser plugins for Chrome and Firefox.</p>
+<p>jQuery went through a major house-cleaning with the 1.9 release that removed some features. If you haven&#8217;t yet moved from an earlier version, see the <a href="http://jquery.com/upgrade-guide/1.9/">jQuery 1.9 Upgrade Guide</a> and let the <a href="http://github.com/jquery/jquery-migrate/#readme">jQuery Migrate plugin</a> do all the heavy lifting for you.</p>
+<h2>What&#8217;s New?</h2>
+<p>You may be wondering what great new things await you in these releases. Perhaps you&#8217;re fearing that they hold a bunch of breaking changes. You just know the project lead will suggest updating things right now. There goes your whole damn week and that trip to Florida. Well fear not! We&#8217;ve fixed quite a few bugs, but the other features and changes are mainly organizational ones that don&#8217;t affect the behavior of APIs. Your code shouldn&#8217;t break, it should just run a little faster. Here are the highlights:</p>
+<p><b>Fewer forced layouts:</b> In this release we declared war on places where we might inadvertently force the browser to do a time-consuming layout. We found a few and eliminated one in particular that could occur when changing class names. This can result in a big performance boost for some pages.</p>
+<p><b>Granular custom builds:</b> Our modularity is now defined by <a href="http://en.wikipedia.org/wiki/Asynchronous_module_definition">AMD</a>, and it is easier to build small subsets of the library when space is at a premium. If you want to know more, we&#8217;ve hidden the details in the <a href="https://github.com/jquery/jquery#readme">README file</a> where nobody ever looks.</p>
+<p><b>Lower startup overhead:</b> The new modularity and avoidance of forced layouts led us to refactor our feature detects so that they run the first time they&#8217;re needed. If you never call the API needing that feature detect, you never run that code. Previously we ran all feature detects when the page loaded, that led to delays that were generally small, but added up&#8211;especially on mobile platforms.</p>
+<p><b>Published on npm:</b> Our releases will now be <a href="https://npmjs.org/package/jquery/">published on npm</a> so that you can use them with node or browserify. Both the 1.x and 2.x branches are available on npm, but remember that only the 2.x branch is supported to run in node.</p>
+<p><b>Published on Bower:</b> We&#8217;re now using <a href="http://bower.io/">Bower</a> for our internal dependency management including Sizzle, so you&#8217;ll see jQuery releases on Bower as soon as they&#8217;re available. </p>
+<p>Some people have asked about supporting other package managers inside the jQuery library, but we&#8217;ve decided to only support the two that we use internally at the moment. There are more than a dozen package/dependency managers, it would be handy if they all could agree on a single format for projects to publish information. We don&#8217;t want the package manager&#8217;s overhead to be pushed off to individual projects like jQuery.</p>
+<p>Although the glamor always seems to be in the new stuff, we don&#8217;t like to ignore the bugs and inconveniences that people have run across while using the last version. We worked hard to knock down our bug list and tackled quite a few of them. We even fixed a bug that only occurs in IE6, better late than never!</p>
+<h2>Sourcemap changes</h2>
+<p>This release does not contain the sourcemap comment in the minified file. Sourcemaps have proven to be a very problematic and puzzling thing to developers, spawning <a href="http://stackoverflow.com/questions/18365315/jquerys-jquery-1-10-2-min-map-is-triggering-a-404-not-found">hundreds of confused developers</a> on forums like StackOverflow and causing some to think jQuery itself was broken.</p>
+<p>We&#8217;ll still be generating and distributing sourcemaps, but you will need to add the appropriate sourcemap comment at the end of the minified file if the browser does not support manually associating map files (currently, none do). If you generate your own jQuery file using the custom build process, the sourcemap comment will be present in the minified file and the map is generated; you can either leave it in and use sourcemaps or edit it out and ignore the map file entirely.</p>
+<p>We hope to bring back and improve sourcemap support in the future, but at the moment neither the design nor the implementation seem suited for situations like jQuery&#8217;s, where there are widely distributed files on CDNs. We&#8217;d like sourcemaps (and browsers supporting them) to gracefully handle situations like file renaming or missing files. See our <a href="http://bugs.jquery.com/ticket/14415">bug ticket</a> for more information.</p>
+<h2>Acknowledgements</h2>
+<p>This release would not have happened without the hard work of many people. Thanks to everyone who reported bugs, tried out the prerelease files, or provided constructive criticism. Particular thanks are due to Alex Robbin, Amey Sakhadeo, Anthony Ryan, Aurelio DeRosa, Chris Antaki, Chris Price, Christopher Jones, Corey Frang, Daniel Herman, Domenic Denicola, Dominik D. Geyer, Forbes Lindesay, George Kats, Guy Bedford, Ilya Kantor, Jakob Stoeck, Jeremy Dunck, John Paul, Julian Aubourg, Jörn Zaefferer, Lihan Li, Marian Sollmann, Markus Staab, Marlon Landaverde, Micha&#322; Go&#322;&#281;biowski, Mike Sidorov, Oleg Gaidarenko, Richard Gibson, Rick Waldron, Ronny Springer, Scott González, Sindre Sorhus, T.J. Crowder, Terry Jones, Timmy Willison, and Timo Tijhof. Colin Snover&#8217;s commentary in #jquery-dev is also a source of rare humor for the team.</p>
+<h2>Changelog</h2>
+<h3>jQuery 1.11 and 2.1 (common to both)</h3>
+<h3>Ajax</h3>
+<ul>
+<li><a href="http://bugs.jquery.com/ticket/14036">#14036: ajaxLocation Includes HTTP Basic Authentication Info</a></li>
+<li><a href="http://bugs.jquery.com/ticket/14356">#14356: Remove string indexing used in AJAX</a></li>
+<li><a href="http://bugs.jquery.com/ticket/14379">#14379: Issue with xhr.js</a></li>
+</ul>
+<h3>Attributes</h3>
+<ul>
+<li><a href="http://bugs.jquery.com/ticket/14250">#14250: addClass and removeClass needlessly assign to className.</a></li>
+</ul>
+<h3>Build</h3>
+<ul>
+<li><a href="http://bugs.jquery.com/ticket/12757">#12757: Enforce style guide via build process</a></li>
+<li><a href="http://bugs.jquery.com/ticket/13983">#13983: Switch to //# for sourcemap directives</a></li>
+<li><a href="http://bugs.jquery.com/ticket/14016">#14016: Include a build option for customizing exports</a></li>
+<li><a href="http://bugs.jquery.com/ticket/14113">#14113: AMD-ify jQuery source</a></li>
+<li><a href="http://bugs.jquery.com/ticket/14118">#14118: Use bower to include Sizzle and QUnit (remove submodules)</a></li>
+<li><a href="http://bugs.jquery.com/ticket/14163">#14163: Make Deferreds/Callbacks/.ready() optional modules</a></li>
+<li><a href="http://bugs.jquery.com/ticket/14415">#14415: Remove sourcemap comment</a></li>
+<li><a href="http://bugs.jquery.com/ticket/14450">#14450: Remove CommonJS+AMD syntax from source</a></li>
+<li><a href="http://bugs.jquery.com/ticket/14451">#14451: Add bower and npm registrations to release script</a></li>
+<li><a href="http://bugs.jquery.com/ticket/14504">#14504: Build: Upgrade to grunt-contrib-jshint 0.7.1 and squash subtasks</a></li>
+<li><a href="http://bugs.jquery.com/ticket/14615">#14615: Manage bower dependencies with grunt-bowercopy</a></li>
+<li><a href="http://bugs.jquery.com/ticket/14702">#14702: Problem with npm package for jquery &#8216;latest&#8217;</a></li>
+</ul>
+<h3>Core</h3>
+<ul>
+<li><a href="http://bugs.jquery.com/ticket/14164">#14164: Reduce forced layout reflows in init or methods</a></li>
+<li><a href="http://bugs.jquery.com/ticket/14492">#14492: parseJSON incorrectly accepts comma expressions</a></li>
+<li><a href="http://bugs.jquery.com/ticket/14548">#14548: npm jQuery does not have a main module</a></li>
+<li><a href="http://bugs.jquery.com/ticket/14549">#14549: npm jQuery does not expose the jQuery function, but instead a wierd factory</a></li>
+<li><a href="http://bugs.jquery.com/ticket/14645">#14645: Remove global exposure for CommonJS environments with a document</a></li>
+</ul>
+<h3>Css</h3>
+<ul>
+<li><a href="http://bugs.jquery.com/ticket/14150">#14150: IE9-10 curCSS =&gt; &#8220;Interface not supported&#8221; in for popups (and probably frames)</a></li>
+<li><a href="http://bugs.jquery.com/ticket/14394">#14394: style=&#8221;x: y !important;&#8221; doesn&#8217;t get changed when calling el.css(x, z) in Chrome and Safari but it works in Firefox</a></li>
+</ul>
+<h3>Data</h3>
+<ul>
+<li><a href="http://bugs.jquery.com/ticket/14101">#14101: Version 1.10 .data() differs from 1.8 when getting data from non-existent object</a></li>
+<li><a href="http://bugs.jquery.com/ticket/14459">#14459: data-* attribute parsing bypasses jQuery.parseJSON (inconsistent with 1.x)</a></li>
+</ul>
+<h3>Effects</h3>
+<ul>
+<li><a href="http://bugs.jquery.com/ticket/14344">#14344: Putting different effects in callbacks uses only the first effect.</a></li>
+</ul>
+<h3>Event</h3>
+<ul>
+<li><a href="http://bugs.jquery.com/ticket/13993">#13993: .triggerHandler doesn&#8217;t return value from handler for DOM0 events</a></li>
+<li><a href="http://bugs.jquery.com/ticket/14180">#14180: focusin/out special events don&#8217;t work cross-window</a></li>
+<li><a href="http://bugs.jquery.com/ticket/14282">#14282: Don&#8217;t call getPreventDefault() if there is a defaultPrevented property</a></li>
+</ul>
+<h3>Manipulation</h3>
+<ul>
+<li><a href="http://bugs.jquery.com/ticket/14716">#14716: Textarea isn&#8217;t cloned properly in IE11</a></li>
+</ul>
+<h3>Misc</h3>
+<ul>
+<li><a href="http://bugs.jquery.com/ticket/14040">#14040: Tests: Replace QUnit.reset usage</a></li>
+</ul>
+<h3>Selector</h3>
+<ul>
+<li><a href="http://bugs.jquery.com/ticket/14142">#14142: Wrong number of elements returned in XML document with numeric IDs in Safari</a></li>
+<li><a href="http://bugs.jquery.com/ticket/14351">#14351: Exception thrown when running `find` in a non-attached DOM node</a></li>
+<li><a href="http://bugs.jquery.com/ticket/14381">#14381: .add() throws &#8220;no such interface&#8221; in IE when adding nodes from another window</a></li>
+<li><a href="http://bugs.jquery.com/ticket/14535">#14535: Selection fails in IE11 when the last context is a no-longer-present iframe document</a></li>
+<li><a href="http://bugs.jquery.com/ticket/14584">#14584: Attribute Ends With case-insensitive in some IE8</a></li>
+</ul>
+<h3>Support</h3>
+<ul>
+<li><a href="http://bugs.jquery.com/ticket/10814">#10814: make support as lazy as possible with closure in mind</a></li>
+<li><a href="http://bugs.jquery.com/ticket/14084">#14084: elem.css(&#8216;width&#8217;) provides incorrect output with `box-sizing: border-box` if run before document ready</a></li>
+<li><a href="http://bugs.jquery.com/ticket/14401">#14401: Error when loading a page with application/xhtml+xml</a></li>
+<li><a href="http://bugs.jquery.com/ticket/14496">#14496: jQuery 2.1.0-beta1 fails to initialize in a XHTML page</a></li>
+</ul>
+<h3>jQuery 1.11</h3>
+<h3>Ajax</h3>
+<ul>
+<li><a href="http://bugs.jquery.com/ticket/13240">#13240: IE8 Doesn&#8217;t support HTTP PATCH method</a></li>
+<li><a href="http://bugs.jquery.com/ticket/14475">#14475: Local Ajax requests don&#8217;t work in IE 11 (ActiveXObject checking in jQuery fails)</a></li>
+</ul>
+<h3>Attributes</h3>
+<ul>
+<li><a href="http://bugs.jquery.com/ticket/2252">#2252: Setting select value via val() shows error in IE6</a></li>
+</ul>
+<h3>Build</h3>
+<ul>
+<li><a href="http://bugs.jquery.com/ticket/14663">#14663: jQuery 1.11.0-beta3 on npm</a></li>
+</ul>
+<h3>Core</h3>
+<ul>
+<li><a href="http://bugs.jquery.com/ticket/14074">#14074: jQuery 1 throws an error on window ready when there is an element in the DOM with the id &#8216;nodeName&#8217;</a></li>
+</ul>
+<h3>Effects</h3>
+<ul>
+<li><a href="http://bugs.jquery.com/ticket/14318">#14318: The animations fadeIn and fadeOut do to function as expected when used with stop()</a></li>
+</ul>
+<h3>Support</h3>
+<ul>
+<li><a href="http://bugs.jquery.com/ticket/14422">#14422: CSP violation including jquery in a blank page</a></li>
+</ul>
+<h3>jQuery 2.1</h3>
+<h3>Ajax</h3>
+<ul>
+<li><a href="http://bugs.jquery.com/ticket/14207">#14207: Ajax error defaults to status 404</a></li>
+</ul>
+<h3>Build</h3>
+<ul>
+<li><a href="http://bugs.jquery.com/ticket/13119">#13119: Make jQuery releases available via npm</a></li>
+<li><a href="http://bugs.jquery.com/ticket/13768">#13768: Error trying to load jQuery from node.js</a></li>
+<li><a href="http://bugs.jquery.com/ticket/14340">#14340: Remove oldIE code from support tests on master</a></li>
+</ul>
+<h3>Core</h3>
+<ul>
+<li><a href="http://bugs.jquery.com/ticket/14313">#14313: Optimize jQuery.merge for size</a></li>
+</ul>
+<h3>Event</h3>
+<ul>
+<li><a href="http://bugs.jquery.com/ticket/14544">#14544: Remove elem reference from event handler</a></li>
+</ul>
+			<div id="comments">
+	
+	
+			<h2 id="comments-title">
+			19 thoughts on &ldquo;<span>jQuery 1.11 and 2.1 Released</span>&rdquo;		</h2>
+
+		
+		<ol class="commentlist">
+				<li class="comment even thread-even depth-1" id="li-comment-545264">
+		<article id="comment-545264" class="comment">
+			<div class="comment-meta">
+				<div class="comment-author vcard">
+					<img alt='' src='https://secure.gravatar.com/avatar/36b8b902489b872b521b51df59bab202?s=68&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/36b8b902489b872b521b51df59bab202?s=136&amp;d=mm&amp;r=g 2x' class='avatar avatar-68 photo' height='68' width='68' /><span class="fn"><a href='http://webwaterfalls.com' rel='external nofollow' class='url'>Jamie</a></span> on <a href="https://blog.jquery.com/2014/01/24/jquery-1-11-and-2-1-released/#comment-545264"><time pubdate datetime="2014-01-24T10:49:25+00:00">January 24, 2014 at 10:49 am</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			</div>
+
+			<div class="comment-content"><p>Wow, nice work, you guys are sure going through these releases fast</p>
+</div>
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-545265">
+		<article id="comment-545265" class="comment">
+			<div class="comment-meta">
+				<div class="comment-author vcard">
+					<img alt='' src='https://secure.gravatar.com/avatar/3988f3c49e14ccdd9ce25fc4698f80a5?s=68&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/3988f3c49e14ccdd9ce25fc4698f80a5?s=136&amp;d=mm&amp;r=g 2x' class='avatar avatar-68 photo' height='68' width='68' /><span class="fn"><a href='http://www.cartware.de' rel='external nofollow' class='url'>Alexander</a></span> on <a href="https://blog.jquery.com/2014/01/24/jquery-1-11-and-2-1-released/#comment-545265"><time pubdate datetime="2014-01-24T12:52:40+00:00">January 24, 2014 at 12:52 pm</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			</div>
+
+			<div class="comment-content"><p>Congratulations on the release!<br />
+Nice to see jQuery landing in NPM.</p>
+</div>
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-545266">
+		<article id="comment-545266" class="comment">
+			<div class="comment-meta">
+				<div class="comment-author vcard">
+					<img alt='' src='https://secure.gravatar.com/avatar/5a39b8e048d7ca23ba3e43110975bd4a?s=68&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/5a39b8e048d7ca23ba3e43110975bd4a?s=136&amp;d=mm&amp;r=g 2x' class='avatar avatar-68 photo' height='68' width='68' /><span class="fn"><a href='http://corbacho.io' rel='external nofollow' class='url'>David Corbacho</a></span> on <a href="https://blog.jquery.com/2014/01/24/jquery-1-11-and-2-1-released/#comment-545266"><time pubdate datetime="2014-01-24T13:05:40+00:00">January 24, 2014 at 1:05 pm</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			</div>
+
+			<div class="comment-content"><p>:D FACT !!  &#8220;If you want to know more, we’ve hidden the details in the README file where nobody ever looks.&#8221;</p>
+</div>
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-545270">
+		<article id="comment-545270" class="comment">
+			<div class="comment-meta">
+				<div class="comment-author vcard">
+					<img alt='' src='https://secure.gravatar.com/avatar/81e649868a7d1914a3c92b2af2d50993?s=68&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/81e649868a7d1914a3c92b2af2d50993?s=136&amp;d=mm&amp;r=g 2x' class='avatar avatar-68 photo' height='68' width='68' /><span class="fn">dude</span> on <a href="https://blog.jquery.com/2014/01/24/jquery-1-11-and-2-1-released/#comment-545270"><time pubdate datetime="2014-01-24T14:05:55+00:00">January 24, 2014 at 2:05 pm</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			</div>
+
+			<div class="comment-content"><p>Hey guys great work on this! Looking forward to upgrading asap. Just a note, bower doesn&#8217;t have 1.11 yet it seems:</p>
+<p>$ bower info jquery#1.11.0<br />
+bower not-cached    git://github.com/components/jquery.git#1.11.0<br />
+bower resolve       git://github.com/components/jquery.git#1.11.0<br />
+bower ENORESTARGET  No tag found that was able to satisfy 1.11.0</p>
+<p>Additional error details:<br />
+Available versions: 2.0.3, 2.0.2, 2.0.1, 2.0.0, 1.10.2, 1.10.1, 1.10.0, 1.9.1, 1.9.0, 1.8.3, 1.8.2, 1.8.1, 1.8.0, 1.7.2, 1.7.1, 1.7.0, 1.6.4, 1.6.3, 1.6.2, 1.6.1, 1.6.0, 1.5.2, 1.5.1, 1.5.0, 1.4.4, 1.4.3, 1.4.2, 1.4.1, 1.4.0, 1.3.2, 1.3.1, 1.3.0, 1.2.6, 1.2.3</p>
+</div>
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-545271">
+		<article id="comment-545271" class="comment">
+			<div class="comment-meta">
+				<div class="comment-author vcard">
+					<img alt='' src='https://secure.gravatar.com/avatar/775bb56bb6df2f6cbae6074ed3c009b6?s=68&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/775bb56bb6df2f6cbae6074ed3c009b6?s=136&amp;d=mm&amp;r=g 2x' class='avatar avatar-68 photo' height='68' width='68' /><span class="fn">Geoff</span> on <a href="https://blog.jquery.com/2014/01/24/jquery-1-11-and-2-1-released/#comment-545271"><time pubdate datetime="2014-01-24T14:35:32+00:00">January 24, 2014 at 2:35 pm</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			</div>
+
+			<div class="comment-content"><p>I was just looking at the Bower situation, and it looks like we need to transition to the new, &#8220;official&#8221; listing of jquery on Bower, which points to their real git repo rather than a shim.</p>
+<p>So, I&#8217;m wondering if that&#8217;s really true, and if it is, how we make the transition.</p>
+</div>
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-545274">
+		<article id="comment-545274" class="comment">
+			<div class="comment-meta">
+				<div class="comment-author vcard">
+					<img alt='' src='https://secure.gravatar.com/avatar/ab723230839161b25b5f8488a9ebbbbd?s=68&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/ab723230839161b25b5f8488a9ebbbbd?s=136&amp;d=mm&amp;r=g 2x' class='avatar avatar-68 photo' height='68' width='68' /><span class="fn">Tom Fuertes</span> on <a href="https://blog.jquery.com/2014/01/24/jquery-1-11-and-2-1-released/#comment-545274"><time pubdate datetime="2014-01-24T15:52:05+00:00">January 24, 2014 at 3:52 pm</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			</div>
+
+			<div class="comment-content"><p>components guys might/should be able to push a tag in the interim. </p>
+<p><a href="https://github.com/components/jquery/issues/40" rel="nofollow">https://github.com/components/jquery/issues/40</a></p>
+</div>
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-545277">
+		<article id="comment-545277" class="comment">
+			<div class="comment-meta">
+				<div class="comment-author vcard">
+					<img alt='' src='https://secure.gravatar.com/avatar/2182417e83cd61c85c3c818518471016?s=68&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/2182417e83cd61c85c3c818518471016?s=136&amp;d=mm&amp;r=g 2x' class='avatar avatar-68 photo' height='68' width='68' /><span class="fn"><a href='http://www.google.com/' rel='external nofollow' class='url'>Khalid Shaikh</a></span> on <a href="https://blog.jquery.com/2014/01/24/jquery-1-11-and-2-1-released/#comment-545277"><time pubdate datetime="2014-01-24T16:12:54+00:00">January 24, 2014 at 4:12 pm</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			</div>
+
+			<div class="comment-content"><p>Great job !</p>
+</div>
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-545286">
+		<article id="comment-545286" class="comment">
+			<div class="comment-meta">
+				<div class="comment-author vcard">
+					<img alt='' src='https://secure.gravatar.com/avatar/41d18a0fd1ac2946cadec7e080fa0f5c?s=68&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/41d18a0fd1ac2946cadec7e080fa0f5c?s=136&amp;d=mm&amp;r=g 2x' class='avatar avatar-68 photo' height='68' width='68' /><span class="fn"><a href='http://kmaunedev.wordpress.com' rel='external nofollow' class='url'>Kyle Maune</a></span> on <a href="https://blog.jquery.com/2014/01/24/jquery-1-11-and-2-1-released/#comment-545286"><time pubdate datetime="2014-01-24T20:13:46+00:00">January 24, 2014 at 8:13 pm</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			</div>
+
+			<div class="comment-content"><p>Awesome!</p>
+</div>
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-545353">
+		<article id="comment-545353" class="comment">
+			<div class="comment-meta">
+				<div class="comment-author vcard">
+					<img alt='' src='https://secure.gravatar.com/avatar/4946f5c75e494a9cfb911dd99d431819?s=68&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/4946f5c75e494a9cfb911dd99d431819?s=136&amp;d=mm&amp;r=g 2x' class='avatar avatar-68 photo' height='68' width='68' /><span class="fn">Iftekher</span> on <a href="https://blog.jquery.com/2014/01/24/jquery-1-11-and-2-1-released/#comment-545353"><time pubdate datetime="2014-01-26T04:34:03+00:00">January 26, 2014 at 4:34 am</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			</div>
+
+			<div class="comment-content"><p>Microsoft should re-design IE and provide a force update to its customers about new IE.</p>
+<p>BTW, nice work.. :)</p>
+</div>
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-545374">
+		<article id="comment-545374" class="comment">
+			<div class="comment-meta">
+				<div class="comment-author vcard">
+					<img alt='' src='https://secure.gravatar.com/avatar/8feac14b86e6408e19694122993e7935?s=68&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/8feac14b86e6408e19694122993e7935?s=136&amp;d=mm&amp;r=g 2x' class='avatar avatar-68 photo' height='68' width='68' /><span class="fn">SoboLAN</span> on <a href="https://blog.jquery.com/2014/01/24/jquery-1-11-and-2-1-released/#comment-545374"><time pubdate datetime="2014-01-26T11:28:14+00:00">January 26, 2014 at 11:28 am</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			</div>
+
+			<div class="comment-content"><p>Awesome work, guys.</p>
+<p>I tested it a bit and, since I found nothing wrong, I put it in production on one of my websites.</p>
+</div>
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-545434">
+		<article id="comment-545434" class="comment">
+			<div class="comment-meta">
+				<div class="comment-author vcard">
+					<img alt='' src='https://secure.gravatar.com/avatar/89b10deee628535a5510db131f983541?s=68&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/89b10deee628535a5510db131f983541?s=136&amp;d=mm&amp;r=g 2x' class='avatar avatar-68 photo' height='68' width='68' /><span class="fn"><a href='http://blakeniemyjski.com' rel='external nofollow' class='url'>Blake Niemyjski</a></span> on <a href="https://blog.jquery.com/2014/01/24/jquery-1-11-and-2-1-released/#comment-545434"><time pubdate datetime="2014-01-27T18:24:02+00:00">January 27, 2014 at 6:24 pm</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			</div>
+
+			<div class="comment-content"><p>Great Job!</p>
+</div>
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-545459">
+		<article id="comment-545459" class="comment">
+			<div class="comment-meta">
+				<div class="comment-author vcard">
+					<img alt='' src='https://secure.gravatar.com/avatar/bc87e622c8f3ac8962b9ff75c9656305?s=68&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/bc87e622c8f3ac8962b9ff75c9656305?s=136&amp;d=mm&amp;r=g 2x' class='avatar avatar-68 photo' height='68' width='68' /><span class="fn">Brett F</span> on <a href="https://blog.jquery.com/2014/01/24/jquery-1-11-and-2-1-released/#comment-545459"><time pubdate datetime="2014-01-28T08:51:57+00:00">January 28, 2014 at 8:51 am</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			</div>
+
+			<div class="comment-content"><p>Wonderful.  Thank you for so many bug fixes.  Looking forward to playing with the new node-specific support, too.</p>
+<p>BTW: might want to update your site footer &#8212; the Quick Access bit is still pointing at 1.10.2 URLs.</p>
+</div>
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-545519">
+		<article id="comment-545519" class="comment">
+			<div class="comment-meta">
+				<div class="comment-author vcard">
+					<img alt='' src='https://secure.gravatar.com/avatar/3d77558ce85511bc7f4eb88b9f305b0e?s=68&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/3d77558ce85511bc7f4eb88b9f305b0e?s=136&amp;d=mm&amp;r=g 2x' class='avatar avatar-68 photo' height='68' width='68' /><span class="fn"><a href='http://unihostbrasil.com.br' rel='external nofollow' class='url'>Unihost Brasil</a></span> on <a href="https://blog.jquery.com/2014/01/24/jquery-1-11-and-2-1-released/#comment-545519"><time pubdate datetime="2014-01-30T01:41:20+00:00">January 30, 2014 at 1:41 am</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			</div>
+
+			<div class="comment-content"><p>Thanks for this new release, we continue using jQuery massively at our projects and with great pleasure!</p>
+<p>Alex &#8211; Unihost Brasil</p>
+</div>
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-545671">
+		<article id="comment-545671" class="comment">
+			<div class="comment-meta">
+				<div class="comment-author vcard">
+					<img alt='' src='https://secure.gravatar.com/avatar/152d3698c7f6e862e292b0337fbd9f9d?s=68&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/152d3698c7f6e862e292b0337fbd9f9d?s=136&amp;d=mm&amp;r=g 2x' class='avatar avatar-68 photo' height='68' width='68' /><span class="fn"><a href='http://www.sitepor500.com.br' rel='external nofollow' class='url'>Marco Faz Site</a></span> on <a href="https://blog.jquery.com/2014/01/24/jquery-1-11-and-2-1-released/#comment-545671"><time pubdate datetime="2014-02-02T23:37:39+00:00">February 2, 2014 at 11:37 pm</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			</div>
+
+			<div class="comment-content"><p>Nice piece of work. I updated all my 6 forum with the new jquery version. You are amazing, guys! Correcting bugs from IE 6? That&#8217;s why I trust so much in this library!</p>
+</div>
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-545723">
+		<article id="comment-545723" class="comment">
+			<div class="comment-meta">
+				<div class="comment-author vcard">
+					<img alt='' src='https://secure.gravatar.com/avatar/79a379be469b7ffeb93e42fd297b1659?s=68&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/79a379be469b7ffeb93e42fd297b1659?s=136&amp;d=mm&amp;r=g 2x' class='avatar avatar-68 photo' height='68' width='68' /><span class="fn">Sheep</span> on <a href="https://blog.jquery.com/2014/01/24/jquery-1-11-and-2-1-released/#comment-545723"><time pubdate datetime="2014-02-04T10:30:52+00:00">February 4, 2014 at 10:30 am</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			</div>
+
+			<div class="comment-content"><p>Great work, great stability. Pure quality. Thank you.</p>
+</div>
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-545799">
+		<article id="comment-545799" class="comment">
+			<div class="comment-meta">
+				<div class="comment-author vcard">
+					<img alt='' src='https://secure.gravatar.com/avatar/7bd5e392e6fe8ff8e5f384059b2d408e?s=68&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/7bd5e392e6fe8ff8e5f384059b2d408e?s=136&amp;d=mm&amp;r=g 2x' class='avatar avatar-68 photo' height='68' width='68' /><span class="fn"><a href='http://www.keymedium.com' rel='external nofollow' class='url'>Key Medium</a></span> on <a href="https://blog.jquery.com/2014/01/24/jquery-1-11-and-2-1-released/#comment-545799"><time pubdate datetime="2014-02-06T08:18:26+00:00">February 6, 2014 at 8:18 am</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			</div>
+
+			<div class="comment-content"><p>This new release has been anticipated for quite some time, glad to see it&#8217;s release! So far, we&#8217;ve had no trouble whatsoever. Wonderful work gents.</p>
+<p>Yours Truly,<br />
+A long time jQuery dev firm</p>
+</div>
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-545931">
+		<article id="comment-545931" class="comment">
+			<div class="comment-meta">
+				<div class="comment-author vcard">
+					<img alt='' src='https://secure.gravatar.com/avatar/d500aa29dada6e8f96c4e829863a66c9?s=68&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/d500aa29dada6e8f96c4e829863a66c9?s=136&amp;d=mm&amp;r=g 2x' class='avatar avatar-68 photo' height='68' width='68' /><span class="fn"><a href='http://cr8s.net/' rel='external nofollow' class='url'>Crates</a></span> on <a href="https://blog.jquery.com/2014/01/24/jquery-1-11-and-2-1-released/#comment-545931"><time pubdate datetime="2014-02-12T10:07:36+00:00">February 12, 2014 at 10:07 am</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			</div>
+
+			<div class="comment-content"><p>Woah, woah, woah. Hold the phone.</p>
+<p>jQuery has a README file?!</p>
+</div>
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+
+	</li><!-- #comment-## -->
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-546181">
+		<article id="comment-546181" class="comment">
+			<div class="comment-meta">
+				<div class="comment-author vcard">
+					<img alt='' src='https://secure.gravatar.com/avatar/ba9d59ab0f3588e3487b61edb49e7c11?s=68&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/ba9d59ab0f3588e3487b61edb49e7c11?s=136&amp;d=mm&amp;r=g 2x' class='avatar avatar-68 photo' height='68' width='68' /><span class="fn">Sara</span> on <a href="https://blog.jquery.com/2014/01/24/jquery-1-11-and-2-1-released/#comment-546181"><time pubdate datetime="2014-02-21T05:05:05+00:00">February 21, 2014 at 5:05 am</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			</div>
+
+			<div class="comment-content"><p>Great work.</p>
+</div>
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1" id="li-comment-546246">
+		<article id="comment-546246" class="comment">
+			<div class="comment-meta">
+				<div class="comment-author vcard">
+					<img alt='' src='https://secure.gravatar.com/avatar/5d750f7039d17c3692c0dd12e29470c3?s=68&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/5d750f7039d17c3692c0dd12e29470c3?s=136&amp;d=mm&amp;r=g 2x' class='avatar avatar-68 photo' height='68' width='68' /><span class="fn">Bhawani Singh</span> on <a href="https://blog.jquery.com/2014/01/24/jquery-1-11-and-2-1-released/#comment-546246"><time pubdate datetime="2014-02-24T23:06:47+00:00">February 24, 2014 at 11:06 pm</time></a> <span class="says">said:</span>
+									</div><!-- .comment-author .vcard -->
+
+				
+			</div>
+
+			<div class="comment-content"><p>Great Work guys!!!!!!!!!!!!!!!!!!! keep it up.</p>
+</div>
+
+			<div class="reply">
+							</div><!-- .reply -->
+		</article><!-- #comment-## -->
+
+	</li><!-- #comment-## -->
+		</ol>
+
+		
+	
+	
+</div><!-- #comments -->
+	</div>
+	<div id="sidebar" class="widget-area" role="complementary">
+	<aside class="widget">
+		<h3 class="widget-title">Categories</h3>
+		<ul>
+				<li class="cat-item cat-item-16"><a href="https://blog.jquery.com/category/events/" >Events</a>
+</li>
+	<li class="cat-item cat-item-20"><a href="https://blog.jquery.com/category/foundation/" >Foundation</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="https://blog.jquery.com/category/jquery/" >jQuery</a>
+</li>
+	<li class="cat-item cat-item-2"><a href="https://blog.jquery.com/category/jquery-ui/" >jQuery UI</a>
+</li>
+	<li class="cat-item cat-item-24"><a href="https://blog.jquery.com/category/projects/" >Projects</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="https://blog.jquery.com/category/weekly-news/" >Weekly News</a>
+</li>
+		</ul>
+	</aside>
+	<aside class="widget">
+		<h3 class="widget-title">Recent Posts</h3>
+		<ul>
+			<li><a href="https://blog.jquery.com/2017/03/20/jquery-3-2-1-now-available/">jQuery 3.2.1 Is Now Available, With Some Hotfixes</a></li><li><a href="https://blog.jquery.com/2017/03/16/jquery-3-2-0-is-out/">jQuery 3.2.0 Is Out!</a></li><li><a href="https://blog.jquery.com/2016/09/22/jquery-3-1-1-released/">jQuery 3.1.1 Released!</a></li><li><a href="https://blog.jquery.com/2016/07/27/the-jquery-foundation-and-standards-2/">The jQuery Foundation and Standards</a></li><li><a href="https://blog.jquery.com/2016/07/07/jquery-3-1-0-released-no-more-silent-errors/">jQuery 3.1.0 Released - No More Silent Errors</a></li><li><a href="https://blog.jquery.com/2016/06/09/jquery-3-0-final-released/">jQuery 3.0 Final Released!</a></li><li><a href="https://blog.jquery.com/2016/05/20/jquery-3-0-release-candidate-released/">jQuery 3.0 Release Candidate...Released!</a></li><li><a href="https://blog.jquery.com/2016/05/20/jquery-1-12-4-and-2-2-4-released/">jQuery 1.12.4 and 2.2.4 Released</a></li><li><a href="https://blog.jquery.com/2016/05/19/jquery-migrate-1-4-1-released-and-the-path-to-jquery-3-0/">jQuery Migrate 1.4.1 released, and the path to jQuery 3.0</a></li><li><a href="https://blog.jquery.com/2016/04/19/eslint-joins-the-jquery-foundation/">ESLint Joins the jQuery Foundation</a></li>		</ul>
+	</aside>
+	<aside class="widget">
+		<h3 class="widget-title">Archives</h3>
+		<ul>
+				<li><a href='https://blog.jquery.com/2017/03/'>March 2017</a></li>
+	<li><a href='https://blog.jquery.com/2016/09/'>September 2016</a></li>
+	<li><a href='https://blog.jquery.com/2016/07/'>July 2016</a></li>
+	<li><a href='https://blog.jquery.com/2016/06/'>June 2016</a></li>
+	<li><a href='https://blog.jquery.com/2016/05/'>May 2016</a></li>
+	<li><a href='https://blog.jquery.com/2016/04/'>April 2016</a></li>
+	<li><a href='https://blog.jquery.com/2016/03/'>March 2016</a></li>
+	<li><a href='https://blog.jquery.com/2016/02/'>February 2016</a></li>
+	<li><a href='https://blog.jquery.com/2016/01/'>January 2016</a></li>
+	<li><a href='https://blog.jquery.com/2015/12/'>December 2015</a></li>
+	<li><a href='https://blog.jquery.com/2015/11/'>November 2015</a></li>
+	<li><a href='https://blog.jquery.com/2015/09/'>September 2015</a></li>
+	<li><a href='https://blog.jquery.com/2015/07/'>July 2015</a></li>
+	<li><a href='https://blog.jquery.com/2015/04/'>April 2015</a></li>
+	<li><a href='https://blog.jquery.com/2015/03/'>March 2015</a></li>
+	<li><a href='https://blog.jquery.com/2015/02/'>February 2015</a></li>
+	<li><a href='https://blog.jquery.com/2015/01/'>January 2015</a></li>
+	<li><a href='https://blog.jquery.com/2014/12/'>December 2014</a></li>
+	<li><a href='https://blog.jquery.com/2014/10/'>October 2014</a></li>
+	<li><a href='https://blog.jquery.com/2014/09/'>September 2014</a></li>
+	<li><a href='https://blog.jquery.com/2014/08/'>August 2014</a></li>
+	<li><a href='https://blog.jquery.com/2014/07/'>July 2014</a></li>
+	<li><a href='https://blog.jquery.com/2014/05/'>May 2014</a></li>
+	<li><a href='https://blog.jquery.com/2014/04/'>April 2014</a></li>
+	<li><a href='https://blog.jquery.com/2014/03/'>March 2014</a></li>
+	<li><a href='https://blog.jquery.com/2014/01/'>January 2014</a></li>
+	<li><a href='https://blog.jquery.com/2013/12/'>December 2013</a></li>
+	<li><a href='https://blog.jquery.com/2013/11/'>November 2013</a></li>
+	<li><a href='https://blog.jquery.com/2013/10/'>October 2013</a></li>
+	<li><a href='https://blog.jquery.com/2013/09/'>September 2013</a></li>
+	<li><a href='https://blog.jquery.com/2013/08/'>August 2013</a></li>
+	<li><a href='https://blog.jquery.com/2013/07/'>July 2013</a></li>
+	<li><a href='https://blog.jquery.com/2013/06/'>June 2013</a></li>
+	<li><a href='https://blog.jquery.com/2013/05/'>May 2013</a></li>
+	<li><a href='https://blog.jquery.com/2013/04/'>April 2013</a></li>
+	<li><a href='https://blog.jquery.com/2013/03/'>March 2013</a></li>
+	<li><a href='https://blog.jquery.com/2013/02/'>February 2013</a></li>
+	<li><a href='https://blog.jquery.com/2013/01/'>January 2013</a></li>
+	<li><a href='https://blog.jquery.com/2012/12/'>December 2012</a></li>
+	<li><a href='https://blog.jquery.com/2012/11/'>November 2012</a></li>
+	<li><a href='https://blog.jquery.com/2012/10/'>October 2012</a></li>
+	<li><a href='https://blog.jquery.com/2012/09/'>September 2012</a></li>
+	<li><a href='https://blog.jquery.com/2012/08/'>August 2012</a></li>
+	<li><a href='https://blog.jquery.com/2012/07/'>July 2012</a></li>
+	<li><a href='https://blog.jquery.com/2012/06/'>June 2012</a></li>
+	<li><a href='https://blog.jquery.com/2012/05/'>May 2012</a></li>
+	<li><a href='https://blog.jquery.com/2012/04/'>April 2012</a></li>
+	<li><a href='https://blog.jquery.com/2012/03/'>March 2012</a></li>
+	<li><a href='https://blog.jquery.com/2012/01/'>January 2012</a></li>
+	<li><a href='https://blog.jquery.com/2011/12/'>December 2011</a></li>
+	<li><a href='https://blog.jquery.com/2011/11/'>November 2011</a></li>
+	<li><a href='https://blog.jquery.com/2011/10/'>October 2011</a></li>
+	<li><a href='https://blog.jquery.com/2011/09/'>September 2011</a></li>
+	<li><a href='https://blog.jquery.com/2011/08/'>August 2011</a></li>
+	<li><a href='https://blog.jquery.com/2011/06/'>June 2011</a></li>
+	<li><a href='https://blog.jquery.com/2011/05/'>May 2011</a></li>
+	<li><a href='https://blog.jquery.com/2011/04/'>April 2011</a></li>
+	<li><a href='https://blog.jquery.com/2011/03/'>March 2011</a></li>
+	<li><a href='https://blog.jquery.com/2011/02/'>February 2011</a></li>
+	<li><a href='https://blog.jquery.com/2011/01/'>January 2011</a></li>
+	<li><a href='https://blog.jquery.com/2010/12/'>December 2010</a></li>
+	<li><a href='https://blog.jquery.com/2010/11/'>November 2010</a></li>
+	<li><a href='https://blog.jquery.com/2010/10/'>October 2010</a></li>
+	<li><a href='https://blog.jquery.com/2010/09/'>September 2010</a></li>
+	<li><a href='https://blog.jquery.com/2010/08/'>August 2010</a></li>
+	<li><a href='https://blog.jquery.com/2010/07/'>July 2010</a></li>
+	<li><a href='https://blog.jquery.com/2010/06/'>June 2010</a></li>
+	<li><a href='https://blog.jquery.com/2010/04/'>April 2010</a></li>
+	<li><a href='https://blog.jquery.com/2010/03/'>March 2010</a></li>
+	<li><a href='https://blog.jquery.com/2010/02/'>February 2010</a></li>
+	<li><a href='https://blog.jquery.com/2010/01/'>January 2010</a></li>
+	<li><a href='https://blog.jquery.com/2009/12/'>December 2009</a></li>
+	<li><a href='https://blog.jquery.com/2009/10/'>October 2009</a></li>
+	<li><a href='https://blog.jquery.com/2009/08/'>August 2009</a></li>
+	<li><a href='https://blog.jquery.com/2009/07/'>July 2009</a></li>
+	<li><a href='https://blog.jquery.com/2009/06/'>June 2009</a></li>
+	<li><a href='https://blog.jquery.com/2009/05/'>May 2009</a></li>
+	<li><a href='https://blog.jquery.com/2009/04/'>April 2009</a></li>
+	<li><a href='https://blog.jquery.com/2009/03/'>March 2009</a></li>
+	<li><a href='https://blog.jquery.com/2009/02/'>February 2009</a></li>
+	<li><a href='https://blog.jquery.com/2009/01/'>January 2009</a></li>
+	<li><a href='https://blog.jquery.com/2008/12/'>December 2008</a></li>
+	<li><a href='https://blog.jquery.com/2008/11/'>November 2008</a></li>
+	<li><a href='https://blog.jquery.com/2008/10/'>October 2008</a></li>
+	<li><a href='https://blog.jquery.com/2008/09/'>September 2008</a></li>
+	<li><a href='https://blog.jquery.com/2008/08/'>August 2008</a></li>
+	<li><a href='https://blog.jquery.com/2008/07/'>July 2008</a></li>
+	<li><a href='https://blog.jquery.com/2008/06/'>June 2008</a></li>
+	<li><a href='https://blog.jquery.com/2008/05/'>May 2008</a></li>
+	<li><a href='https://blog.jquery.com/2008/03/'>March 2008</a></li>
+	<li><a href='https://blog.jquery.com/2008/02/'>February 2008</a></li>
+	<li><a href='https://blog.jquery.com/2008/01/'>January 2008</a></li>
+	<li><a href='https://blog.jquery.com/2007/12/'>December 2007</a></li>
+	<li><a href='https://blog.jquery.com/2007/11/'>November 2007</a></li>
+	<li><a href='https://blog.jquery.com/2007/10/'>October 2007</a></li>
+	<li><a href='https://blog.jquery.com/2007/09/'>September 2007</a></li>
+	<li><a href='https://blog.jquery.com/2007/08/'>August 2007</a></li>
+	<li><a href='https://blog.jquery.com/2007/07/'>July 2007</a></li>
+	<li><a href='https://blog.jquery.com/2007/06/'>June 2007</a></li>
+	<li><a href='https://blog.jquery.com/2007/05/'>May 2007</a></li>
+	<li><a href='https://blog.jquery.com/2007/04/'>April 2007</a></li>
+	<li><a href='https://blog.jquery.com/2007/03/'>March 2007</a></li>
+	<li><a href='https://blog.jquery.com/2007/02/'>February 2007</a></li>
+	<li><a href='https://blog.jquery.com/2007/01/'>January 2007</a></li>
+	<li><a href='https://blog.jquery.com/2006/12/'>December 2006</a></li>
+	<li><a href='https://blog.jquery.com/2006/11/'>November 2006</a></li>
+	<li><a href='https://blog.jquery.com/2006/10/'>October 2006</a></li>
+	<li><a href='https://blog.jquery.com/2006/09/'>September 2006</a></li>
+	<li><a href='https://blog.jquery.com/2006/08/'>August 2006</a></li>
+	<li><a href='https://blog.jquery.com/2006/07/'>July 2006</a></li>
+	<li><a href='https://blog.jquery.com/2006/06/'>June 2006</a></li>
+	<li><a href='https://blog.jquery.com/2006/05/'>May 2006</a></li>
+	<li><a href='https://blog.jquery.com/2006/04/'>April 2006</a></li>
+	<li><a href='https://blog.jquery.com/2006/03/'>March 2006</a></li>
+	<li><a href='https://blog.jquery.com/2006/02/'>February 2006</a></li>
+	<li><a href='https://blog.jquery.com/2006/01/'>January 2006</a></li>
+		</ul>
+	</aside>
+</div>
+</div>
+
+	</div>
+</div>
+
+<footer class="clearfix simple">
+	<div class="constrain">
+		<div class="row">
+			<div class="six columns offset-by-three">
+				<h3><span>Books</span></h3>
+				<ul class="books">
+					<li>
+						<a href="http://www.packtpub.com/learning-jquery-with-simple-javascript-techniques-fourth-edition/book">
+							<img src="https://blog.jquery.com/wp-content/themes/jquery/content/books/learning-jquery-4th-ed.jpg" alt="Learning jQuery 4th Edition by Karl Swedberg and Jonathan Chaffer" width="92" height="114">
+							Learning jQuery Fourth Edition
+							<cite>Karl Swedberg and Jonathan Chaffer</cite>
+						</a>
+					</li>
+					<li>
+						<a href="http://www.manning.com/derosa?a_aid=141d9491&a_bid=bdd5b7ad">
+							<img src="https://blog.jquery.com/wp-content/themes/jquery/content/books/jquery-in-action.jpg" alt="jQuery in Action by Bear Bibeault, Yehuda Katz, and Aurelio De Rosa" width="92" height="114">
+							jQuery in Action
+							<cite>Bear Bibeault, Yehuda Katz, and Aurelio De Rosa</cite>
+						</a>
+					</li>
+					<li>
+						<a href="http://www.syncfusion.com/resources/techportal/ebooks/jquery?utm_medium=BizDev-jQuery.org0513">
+							<img src="https://blog.jquery.com/wp-content/themes/jquery/content/books/jquery-succinctly.jpg" alt="jQuery Succinctly by Cody Lindley" width="92" height="114">
+							jQuery Succinctly
+							<cite>Cody Lindley</cite>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		
+<div id="legal">
+	<ul class="footer-site-links">
+			<li><a class="icon-pencil" href="http://learn.jquery.com/">Learning Center</a></li>
+			<li><a class="icon-group" href="http://forum.jquery.com/">Forum</a></li>
+			<li><a class="icon-wrench" href="http://api.jquery.com/">API</a></li>
+			<li><a class="icon-twitter" href="http://twitter.com/jquery">Twitter</a></li>
+			<li><a class="icon-comments" href="http://irc.jquery.org/">IRC</a></li>
+			<li><a class="icon-github" href="https://github.com/jquery">GitHub</a></li>
+	</ul>
+	<p class="copyright">
+		Copyright 2017 <a href="https://jquery.org/team/">The jQuery Foundation</a>.
+		<a href="https://jquery.org/license/">jQuery License</a>
+		<span class="sponsor-line"><a href="http://digitalocean.com" rel="nofollow" class="do-link">Web hosting by Digital Ocean</a> | <a href="http://www.stackpath.com" rel="nofollow" class="sp-link">CDN by StackPath</a></span>
+	</p>
+</div>
+
+	</div>
+</footer>
+
+<script type='text/javascript' src='https://blog.jquery.com/wp-includes/js/wp-embed.min.js?ver=4.7.4'></script>
+
+</body>
+</html>
